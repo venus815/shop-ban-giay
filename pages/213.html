@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng Giày</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #1e272e;
+            color: white;
+            padding: 10px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-search {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .search-box {
+            margin-left: 20px;
+            position: relative;
+        }
+        .search-box input {
+            padding: 12px 50px 12px 15px;
+            border: none;
+            border-radius: 25px;
+            outline: none;
+            width: 250px;
+            font-size: 16px;
+        }
+        .search-box .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ff4757;
+        }
+        .products h2 {
+            margin-top: 20px; /* Tạo khoảng cách phía trên */
+            padding-top: 10px;
+            text-align: center;
+        }    
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background-color: #f4f4f4; text-align: center; }
+        .container { padding: 20px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
+        .product { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); position: relative; }
+        .product img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; }
+        .price { font-weight: bold; color: #333; }
+        .sell { color: red; font-weight: bold; }
+        .discount { background-color: pink; color: #d60000; font-weight: bold; padding: 3px 5px; border-radius: 5px; }
+        .rating { color: gold; }
+        .sold { color: gray; font-size: 14px; }
+        button { background: #ff6600; color: white; padding: 10px; border: none; cursor: pointer; border-radius: 5px; margin: 5px; }
+        button:hover { background: #e65c00; }
+        .buy-now { background: green; }
+        .buy-now:hover { background: darkgreen; }
+        .cart { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin-top: 20px; text-align: left; max-width: 400px; margin-left: auto; margin-right: auto; }
+        .cart-item { display: flex; justify-content: space-between; margin-bottom: 10px; }
+        .cart-total { font-weight: bold; margin-top: 10px; }
+        .contact { padding: 20px; background: #fff; margin-top: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+}
+
+        .modal-content {
+            max-width: 80%;
+            max-height: 80%;
+            cursor: grab;
+            transition: transform 0.2s ease-in-out;
+}
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+}
+
+        .close:hover {
+            color: red;
+}
+        footer {
+            background: #1e272e;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-search">
+            <a href="trangchu.html" class="logo"><img src="https://yt3.ggpht.com/774HQnh9r_SHh8cgEP37SC-wd4_2luSIvFLahZW_jl9DmAo23YUB2FjcJUJMTmijPIVrpAasiWKblA=s800-c-fcrop64=1,00000000ffffffff-nd-v1-rwa" alt="Shop Giày"></a>
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <img src="https://img.pikbest.com/png-images/qiantu/magnifying-glass-icon_2690769.png!sw800" alt="Search" class="search-icon">
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="sanpham.html">Sản phẩm</a></li>
+                <li><a href="cart.html">Giỏ hàng</a></li>
+                <li><a href="checkout.html">Thanh toán</a></li>
+                <li><a href="account.html">Tài khoản</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="support.html">Hỗ trợ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="products">
+        <h2>Danh Sách Sản Phẩm</h2>
+        <div class="product-grid" id="product-list"></div>
+    </section>
+
+    <script>
+        const products = [
+            { name: "Nike Air Max", size: "39 - 44", price: 3000000, sell: 2700000, image: "https://yt3.ggpht.com/XZb6BqwWU9RhkX5AfXFSMAkgb5uWjJrTxmVXMjJS4dDuqr_VjpMFPFG6WMWotGepclnUiAyEkyDutw=s225-c-fcrop64=1,00000000ffffffff-rw-nd-v1" },
+            { name: "Adidas Ultra Boost", size: "38 - 43", price: 3200000, sell: 2900000, image: "https://yt3.ggpht.com/pTOO0ormS_MVIjIpyA8WZ5N_rGZ54hmG98yyrMs2VrN5k9tsxCF1JwW-8Zq8_2mPO6iLjOeBE40i=s225-c-fcrop64=1,00000000ffffffff-rw-nd-v1" },
+            { name: "Puma RS-X", size: "40 - 45", price: 2800000, sell: 2500000, image: "https://yt3.ggpht.com/37xfZLyDduXtyXHaWShsYT_6VmzHwCgyV2st2gj_O4_HQTEJLSPKwM8q2OfmyiSdXXR9jKugyhV5Xw=s225-c-fcrop64=1,00000000ffffffff-rw-nd-v1" },
+            { name: "Converse Chuck 70", size: "36 - 44", price: 1700000, sell: 1500000, image: "https://yt3.ggpht.com/Pfck5rTr0eS219-MeoAgRRl7POuixs1UONhdvNXFqfJQHGqs1XL9TvXupOJifJ9ls2R0F6WaaG3v=s225-c-fcrop64=1,00000000ffffffff-rw-nd-v1" },
+            { name: "Vans Old Skool", size: "37 - 45", price: 1600000, sell: 1400000, image: "https://yt3.ggpht.com/0beXXPA_XVr7kGlHQvUBicrZkyxe_XJNK330NOx7ZzoIMCs4Nho-PtA636Va5gfktrBOne9Soi5kRJk=s225-c-fcrop64=1,00000000ffffffff-rw-nd-v1" },
+            { name: "New Balance 574", size: "38 - 44", price: 2100000, sell: 1900000, image: "https://yt3.ggpht.com/Kc1feEfsmgWjOUMJlqe20WBBD-m7Y5kDanU3DEnyd895uylSF7ooci0D9Q3ebb4rd5aBxG_zjUM7DQ=s225-c-fcrop64=1,00000000ffffffff-rw-nd-v1" },
+            { name: "Jordan 1 Low", size: "39 - 47", price: 3500000, sell: 3200000, image: "https://yt3.ggpht.com/7OszJ654FV842nCTzwxZPEAGOgBuytWn3dixn1hEOxXqHiPCeTX4RxHVcxLo5FB67Ff5s9GXutxUdA=s201-c-fcrop64=1,0000197fffffe680-rw-nd-v1" },
+            { name: "Yeezy 350 V2", size: "38 - 46", price: 4500000, sell: 4200000, image: "https://yt3.ggpht.com/ixw8l6UmOV-1mC5inK0W20fAXfryrRhOpcX4djXhG6A7ckQxtn9_6DrrDFXBL-6KycuqJuIH_35uFSs=s194-c-fcrop64=1,00002020ffffdfdf-rw-nd-v1" },
+            { name: "Reebok Classic Leather", size: "37 - 45", price: 1900000, sell: 1700000, image: "https://yt3.ggpht.com/GCsy13jCWAkrvj6MBj_-fomYrQDjGoiJXu2v8eDDvq9QXx0bynG4IE_wvG9SqMdBH2wLJiSMzraa7A=s225-c-fcrop64=1,00000000ffffffff-rw-nd-v1" },
+            { name: "Fila Disruptor II", size: "36 - 44", price: 1800000, sell: 1600000, image: "https://yt3.ggpht.com/yIG_UwSp8WcvK6Q0RyYB0dyPFd5P50rz3cNqPI-00fiXgxPcobi_CwUCKiiMala4bX-gr53g5KP7zXU=s225-c-fcrop64=1,00000000ffffffff-rw-nd-v1" },
+            { name: "Nike Dunk Low", size: "39 - 45", price: 3300000, sell: 3100000, image: "https://yt3.ggpht.com/agP3Vikyd8-jHrRvyzlUyRKb_R3vx2cp1JAstcDsQ_JVRn1Ncz7AHkDw_CuB1P_8CPZYrHADrl6C7C4=s225-c-fcrop64=1,00000000ffffffff-rw-nd-v1" },
+            { name: "Adidas Stan Smith", size: "37 - 44", price: 2200000, sell: 2000000, image: "https://yt3.ggpht.com/wVR3HJEolg59tNPHBfsk5bglRGjtfTLWaDFVoZ4NYekSVLLVCIrTVWovP7pxxcCin6GrVNfqB8XjUCQ=s225-c-fcrop64=1,00000000ffffffff-rw-nd-v1" },
+            { name: "Puma Suede Classic", size: "38 - 44", price: 2000000, sell: 1800000, image: "https://yt3.ggpht.com/QnjLjfrcdLhZXyi05sXq5eYKLt6J2mhQXY_gsJhkFFlhTWuhUkzKzFXu515mGv2rabGtyozFvKbZAQ=s194-c-fcrop64=1,00002020ffffdfdf-rw-nd-v1" },
+            { name: "Asics Gel-Lyte III", size: "39 - 45", price: 2600000, sell: 2400000, image: "https://yt3.ggpht.com/8AUR1NlNJPsd5uT3F2nRp8ux7CyG-oX1gbMLi4NbuFcOrIbgfxIxQ-z1XTzBQK4ThrbhNx24YbKj2g=s194-c-fcrop64=1,20200000dfdfffff-rw-nd-v1" },
+            { name: "Mizuno Wave Rider", size: "40 - 46", price: 2800000, sell: 2600000, image: "https://yt3.ggpht.com/880iykzdlG8Un3zweWUADpDguA1lptiyL8jwnkKaHV5xSgF1ifhAMyQeonRlIR4SDgGhwEcMQA5J4g=s194-c-fcrop64=1,00002020ffffdfdf-rw-nd-v1" },
+            { name: "Balenciaga Triple S", size: "39 - 47", price: 12000000, sell: 11500000, image: "https://yt3.ggpht.com/kTxDKLlymXiche_8A4Mk_BGu-foMKO4xO6MVSH-waRESleJA-ALrrhLGawBWQjBlHzqEeXpHjAWnwA=s194-c-fcrop64=1,00002020ffffdfdf-rw-nd-v1" },
+            { name: "Gucci Ace Sneakers", size: "38 - 46", price: 9000000, sell: 8500000, image: "https://yt3.ggpht.com/tHfZzBmG8rqkeMTOyyUWK6_lWccxWJKoV9zbOct-nNcOBaT1Ajz-NLSCVM5mPbeQGbatH_HWAiMqgF0=s225-c-fcrop64=1,00000000ffffffff-rw-nd-v1" },
+            { name: "Alexander McQueen Oversized", size: "39 - 47", price: 11000000, sell: 10500000, image: "https://yt3.ggpht.com/vts-FDnII8aUD3MBHvBKcKFnWkyTRV3HfBX2hoi5maEuqPSL90m4PeA4lfL-4RtXY3pb_Uvor3HSKio=s194-c-fcrop64=1,00002020ffffdfdf-rw-nd-v1" },
+            { name: "Common Projects Achilles Low", size: "38 - 46", price: 7500000, sell: 7200000, image: "https://yt3.ggpht.com/gSy1dp6QdkYFGoRjU5eTP95ibbCa4evUWmtAazZ1XIvQ6tvVDPT-RcCXilVcKG9GI_lNBjgxcqZ2=s201-c-fcrop64=1,0000197fffffe680-rw-nd-v1" }
+        ];
+
+        let cart = [];
+
+        function addToCart(id, name, price) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let existingProduct = cart.find(item => item.id === id);
+
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push({ id, name, price, quantity: 1 });
+        }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert(name + " đã được thêm vào giỏ hàng!");
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+            cartItems.innerHTML = "";
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.sell;
+                const itemDiv = document.createElement("div");
+                itemDiv.classList.add("cart-item");
+                itemDiv.innerHTML = `${item.name} - ${item.sell.toLocaleString()}đ`;
+                cartItems.appendChild(itemDiv);
+            });
+            cartTotal.innerText = total.toLocaleString();
+        }
+
+        function loadProducts() {
+    const productList = document.getElementById("product-list");
+    productList.innerHTML = ""; 
+
+    products.forEach((product, index) => {
+        const discount = Math.round((1 - product.sell / product.price) * 100);
+        const productDiv = document.createElement("div");
+        productDiv.classList.add("product");
+        productDiv.innerHTML = `
+            <img src="${product.image}" alt="${product.name}" onclick="openModal('${product.image}')">
+            <h3>${product.name}</h3>
+            <p>Size: ${product.size}</p>
+            <p class="price">Giá: <del style="opacity: 0.6; font-size: 0.8em;">${product.price.toLocaleString()}đ</del> <span class="sell">${product.sell.toLocaleString()}đ</span> <span class="discount">-${discount}%</span></p>
+            <button onclick="addToCart(${index})">Thêm vào Giỏ</button>
+            <button class="buy-now">Đặt Ngay</button>
+`;
+        productList.appendChild(productDiv);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", loadProducts);
+    <!-- Modal hiển thị ảnh -->
+    let scale = 1;
+    let isDragging = false, startX, startY, imgX = 0, imgY = 0;
+
+    function openModal(imgSrc) {
+        const modal = document.getElementById("image-modal");
+        const modalImg = document.getElementById("modal-img");
+
+        modal.style.display = "flex";
+        modalImg.src = imgSrc;
+
+        scale = 1;
+        imgX = 0;
+        imgY = 0;
+        modalImg.style.transform = "scale(1) translate(0px, 0px)";
+    }
+
+    function closeModal() {
+        document.getElementById("image-modal").style.display = "none";
+    }
+
+    document.getElementById("modal-img").addEventListener("wheel", function (event) {
+        event.preventDefault();
+        scale += event.deltaY * -0.0015;
+        scale = Math.min(Math.max(1, scale), 3);
+        this.style.transform = `scale(${scale}) translate(${imgX}px, ${imgY}px)`;
+    });
+
+    document.getElementById("modal-img").addEventListener("mousedown", function (event) {
+        if (scale > 1) {
+            isDragging = true;
+            startX = event.clientX - imgX;
+            startY = event.clientY - imgY;
+            this.style.cursor = "grabbing";
+        }
+    });
+
+    document.addEventListener("mousemove", function (event) {
+        if (isDragging) {
+            imgX = event.clientX - startX;
+            imgY = event.clientY - startY;
+            document.getElementById("modal-img").style.transform = `scale(${scale}) translate(${imgX}px, ${imgY}px)`;
+        }
+    });
+
+    document.addEventListener("mouseup", function () {
+        isDragging = false;
+        document.getElementById("modal-img").style.cursor = "grab";
+    });
+
+    document.getElementById("image-modal").addEventListener("click", function (e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
+
+    document.querySelectorAll(".product img").forEach(img => {
+        img.addEventListener("click", function () {
+            openModal(this.src);
+        });
+    });
+</script>
+<div id="image-modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
+<footer>
+        <p><strong>Thông tin liên hệ:</strong></p>
+        <p>Địa chỉ: 123 Đường ABC, Quận 1, TP. Hồ Chí Minh</p>
+        <p>Email: shopgiayShoeexpress@gmail.com</p>
+        <p>&copy; 2025 Shop Giày. All rights reserved.</p>
+    </footer>
+</body>
+</html>

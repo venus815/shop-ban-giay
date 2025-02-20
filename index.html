@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Giày</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #1e272e;
+            color: white;
+            padding: 10px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-search {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .search-box {
+            margin-left: 20px;
+            position: relative;
+        }
+        .search-box input {
+            padding: 12px 50px 12px 15px;
+            border: none;
+            border-radius: 25px;
+            outline: none;
+            width: 250px;
+            font-size: 16px;
+        }
+        .search-box .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ff4757;
+        }
+        .banner {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #ff6b81, #ff4757);
+            color: white;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: white;
+            color: #ff4757;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+        .btn:hover {
+            background: #ff4757;
+            color: white;
+        }
+        footer {
+            background: #1e272e;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .map-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+        }
+        .spacing {
+            margin-bottom: 20px;
+        }
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            position: relative;
+        }
+        .carousel img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: none;
+        }
+        .carousel img.active {
+            display: block;
+        }
+        .dots-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: background 0.3s;
+            border: 2px solid #ff4757;
+        }
+        .dot.active {
+            background-color: #ff4757;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f8f9fa;
+            padding: 40px 20px;
+            border-top: 3px solid #ff4757;
+            width: 100%;
+            box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+            gap: 50px; 
+            text-align: center;
+            flex-wrap: wrap; 
+        }
+
+        .feature {
+            text-align: center;
+            max-width: 300px;
+            flex: 1; 
+            min-width: 200px; 
+        }
+
+        .feature img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .feature h3 {
+            color: #ff6b81;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .feature p {
+            font-size: 14px;
+            color: #333;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-search">
+            <a href="trangchu.html" class="logo"><img src="https://yt3.ggpht.com/774HQnh9r_SHh8cgEP37SC-wd4_2luSIvFLahZW_jl9DmAo23YUB2FjcJUJMTmijPIVrpAasiWKblA=s800-c-fcrop64=1,00000000ffffffff-nd-v1-rwa" alt="Shop Giày"></a>
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <img src="https://img.pikbest.com/png-images/qiantu/magnifying-glass-icon_2690769.png!sw800" alt="Search" class="search-icon">
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="pages/213.html">Sản phẩm</a></li>
+                <li><a href="cart.html">Giỏ hàng</a></li>
+                <li><a href="checkout.html">Thanh toán</a></li>
+                <li><a href="account.html">Tài khoản</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="support.html">Hỗ trợ</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="banner">
+            <h2>Chào mừng đến với Shop Giày</h2>
+            <p>Chào mừng bạn đến với Shoeexpress – nơi mang đến những đôi giày chất lượng và phong cách! Chúng tôi cung cấp đa dạng mẫu mã từ giày thể thao, giày sneaker đến giày thời trang, đảm bảo phù hợp với mọi phong cách và nhu cầu của bạn. Hãy cùng khám phá bộ sưu tập của chúng tôi và tìm cho mình một đôi giày ưng ý nhất</p>
+        </section>
+
+        <div class="carousel">
+            <img src="https://cdn.shopvnb.com/uploads/images/tin_tuc/khai-truong-shop-vnb-premium-thu-duc-4-1722299566.webp" class="active" alt="Giày 1">
+            <img src="https://bizweb.dktcdn.net/100/147/924/files/363eb5b65f58b906e049.jpg?v=1605334520831" alt="Giày 2">
+            <img src="https://bizweb.dktcdn.net/100/147/924/products/ke-trung-bay-giay-dep-9.jpg?v=1656406664893" alt="Giày 3">
+        </div>
+        <div class="dots-container">
+            <span class="dot active" onclick="changeImage(0)"></span>
+            <span class="dot" onclick="changeImage(1)"></span>
+            <span class="dot" onclick="changeImage(2)"></span>
+        </div>
+
+        <section class="features">
+        <div class="feature">
+            <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="Chính hãng">
+            <h3>CAM KẾT CHÍNH HÃNG</h3>
+            <p><strong>100% Authentic</strong><br>Cam kết sản phẩm chính hãng từ Châu Âu, Châu Mỹ...</p>
+        </div>
+        <div class="feature">
+            <img src="https://cdn-icons-png.flaticon.com/512/3105/3105895.png" alt="Giao hàng">
+            <h3>GIAO HÀNG HỎA TỐC</h3>
+            <p><strong>Express delivery</strong><br>SHIP hỏa tốc 1h nhận hàng trong nội thành HCM</p>
+        </div>
+        <div class="feature">
+            <img src="https://cdn-icons-png.flaticon.com/512/725/725643.png" alt="Hỗ trợ">
+            <h3>HỖ TRỢ 24/24</h3>
+            <p><strong>Supporting 24/24</strong><br>Gọi ngay 0123456789</p>
+        </div>
+        </section>
+
+        <section class="section spacing" style="background: #ff6b81; color: white;">
+            <h2>Giới thiệu về Shop Giày</h2>
+            <p>Bạn cần một đôi giày đẹp, bền và hợp xu hướng? Shoeexpress có tất cả! Chúng tôi cam kết mang đến những sản phẩm chất lượng với giá tốt nhất. Mua ngay để trải nghiệm</p>
+            <p><span style="font-size: 35px;">👇</span></p>
+            <a href="products.html" class="btn">Xem sản phẩm</a>
+        </section>
+
+        <section class="section spacing" style="background: #ff6b81; color: white;">
+            <h2>Mời bạn ghé thăm cửa hàng</h2>
+            <p>Hãy đến trực tiếp cửa hàng của chúng tôi tại địa chỉ <strong>192/2 Nguyễn Thái Bình, Phường 12, Tân Bình, Hồ Chí Minh</strong> để trải nghiệm mua sắm tuyệt vời và nhận nhiều ưu đãi hấp dẫn.</p>
+        </section>
+
+        <section class="section spacing" style="background: #ff4757; color: white;">
+            <h2>Chương trình khuyến mãi</h2>
+            <p>Giảm ngay <strong>100.000đ</strong> cho đơn hàng đầu tiên khi bạn đăng ký tài khoản. Đừng bỏ lỡ cơ hội sở hữu đôi giày yêu thích với giá cực kỳ ưu đãi!</p>
+            <p>Mua 2 tặng 1 - Áp dụng cho các mẫu giày hot nhất!</p>
+            <a href="register.html" class="btn">Đăng ký ngay</a>
+        </section>
+
+        <div class="section spacing" style="text-align: center;">
+            <h2>Đến với Shop của chúng tôi</h2>
+            <p>Địa chỉ: 123 Đường ABC, Quận X, TP. HCM</p>
+        </div>
+
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </main>
+    
+    <footer>
+        <p><strong>Thông tin liên hệ:</strong></p>
+        <p>Địa chỉ: 123 Đường ABC, Quận 1, TP. Hồ Chí Minh</p>
+        <p>Email: shopgiayShoeexpress@gmail.com</p>
+        <p>&copy; 2025 Shop Giày. All rights reserved.</p>
+    </footer>
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll(".carousel img");
+        const dots = document.querySelectorAll(".dot");
+
+        function changeImage(index) {
+            images[currentIndex].classList.remove("active");
+            dots[currentIndex].classList.remove("active");
+            
+            images[index].classList.add("active");
+            dots[index].classList.add("active");
+            
+            currentIndex = index;
+        }
+    </script>
+</body>
+</html>
